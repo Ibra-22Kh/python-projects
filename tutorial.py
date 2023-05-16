@@ -343,14 +343,11 @@ l = ["apple","peer","mango","orange"]
 #     for subvalue in value:
 #         print(subvalue)
 
-def xx (par):
-    return par/10
-
 x  = lambda x: x/10
 
 print(x(50))
 
-print(xx(50))
+
 
 # for key in db.keys():
 #     del db[key][index]
