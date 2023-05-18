@@ -343,9 +343,55 @@ l = ["apple","peer","mango","orange"]
 #     for subvalue in value:
 #         print(subvalue)
 
-x  = lambda x: x/10
+# x  = lambda x: x/10
 
-print(x(50))
+# print(x(50))
+
+#Except Else finally
+
+# a=10
+# b=2
+# i=3
+
+# try:
+#     c=a/x
+# except:
+#     c=a/i 
+#     print("variable is not accepted.") 
+# else:
+#     x =100
+#     print(x)
+
+# finally:
+#     print("This will be executed.")
+
+class CustomEx(Exception):
+    pass
+
+class ElementDoesNotExist (CustomEx):
+    pass
+
+class firstElementIsSmallerThanSecond(CustomEx):
+    pass
+
+
+l= [1,2,3,4,5]
+
+try:
+    if not 3 in l:
+        raise  ElementDoesNotExist
+    elif l[0]<l[1]:
+        raise firstElementIsSmallerThanSecond
+        
+except ElementDoesNotExist:
+    print("Element Does not Exist. Raising an Exception")
+
+except firstElementIsSmallerThanSecond:
+    print("1st element is smaller. Raising an exception")
+else:
+    print("Success element exist!")
+
+
 
 
 
